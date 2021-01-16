@@ -53,15 +53,18 @@ social_media:
   # youtube: your_username
 
 topics:
-  - name: Natural Language Processing
-    web_url: https://github.com/topics/nlp
 
   - name: Machine Learning
     web_url: https://github.com/topics/machine-learning
+    image_url: ./images/machine-learning.png
+
+  - name: Natural Language Processing
+    web_url: https://github.com/topics/nlp
+    image_url: ./images/natural-language-processing.png
   
   - name: Civic Tech
     web_url: https://github.com/topics/civic-tech
-    #image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/css/css.png
+    image_url: ./images/civictech.png
   
 
 
