@@ -18,6 +18,11 @@
       </div>
     {% endif %}
 
+    {% unless posts_total == 0 %}
+      <div class="my-6">
+        {% include thoughts.html %}
+      </div>
+    {% endunless %}
   </div>
 {% else %}
   <div class="d-md-flex min-height-full {% unless site.style == 'dark' %}border-md-bottom{% endunless %}">
@@ -38,7 +43,11 @@
         {% if site.topics %}
           {% include interests.html %}
         {% endif %}
-
+        
+        {% unless posts_total == 0 %}
+          {% include thoughts.html %}
+        {% endunless %}
+        
       </div>
     </div>
   </div>
