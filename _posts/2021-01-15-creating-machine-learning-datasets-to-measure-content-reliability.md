@@ -8,7 +8,7 @@ Is Wikipedia reliable?
 
 It’s an age-old question that most of us have probably encountered, and has also been the subject of some tongue-in-cheek references. 
 
-![image-title-here]({{ site.baseurl }}/images/michael_scott_on_wikipedia.png){:class="img-responsive"}
+![image-title-here]({{ site.baseurl }}/images/michael_scott_on_wikipedia.png){:height="50%" width="50%"}
 
 <br>
 
