@@ -18,7 +18,7 @@
   {% endif %}
 
   {% for repository in filtered_repos | limit: site.projects.limit %}
-    {% if site.projects.include.projects contains repository.name %}
+    {% if site.projects.included.projects contains repository.name %}
       <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
         {% include repo-card.html %}
       </div>
