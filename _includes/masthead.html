@@ -28,6 +28,12 @@
         </a>
       </div>
     {% endif %}
+    <div class="{{ metadata_styles }}">
+      {% octicon repo height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:blog %}
+      <a href="/blog" {% if site.style == 'dark' %}class="text-white"{% endif %}>
+        Blog
+      </a>
+    </div>
     {% if user.location %}
       <div class="{{ metadata_styles }} {% if site.style == 'dark' %}text-white{% endif %}">
         {% octicon location height:20 class:"mr-2 v-align-middle" fill:{{ icon_color }} aria-label:Location %}
