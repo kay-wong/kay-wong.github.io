@@ -37,11 +37,15 @@
             {{ content }}
           </div>
         {% endunless %}
+        
+        {% if site.topics %}
+          {% include interests.html %}
+        {% endif %}
 
         {% include projects.html %}
 
-        {% if site.topics %}
-          {% include interests.html %}
+        {% if site.publications %}
+          {% include publications.html %}
         {% endif %}
         
         {% unless posts_total == 0 %}

@@ -68,6 +68,31 @@ topics:
     image_url: ./images/civictech.png
   
 
+publications:
+
+  - title: "Contextual Neural Machine Translation Improves Translation of Cataphoric Pronouns"
+    web_url: https://www.aclweb.org/anthology/2020.acl-main.530/ 
+    abstract: "In Proceedings of the 58th Conference of the Association for Computational Linguistics (ACL2020)."
+    authors: "KayYen Wong, Sameen Maruf, Gholamreza Haffari"
+    date: "Jul, 2020"
+  
+  - title: "The State of Internet Censorship in Indonesia"
+    web_url: https://ooni.org/post/indonesia-internet-censorship
+    abstract: "A research study by the Open Observatory of Network Interference (OONI) and Sinar Project."
+    authors: "Kay Yen Wong, Maria Xynou, Arturo Filastò, Khairil Yusof, Tan Sze Ming"
+    date: "May 23, 2017"
+
+  - title: "The State of Internet Censorship in Myanmar"
+    web_url: https://ooni.org/post/myanmar-report/
+    abstract: "A research study by the Open Observatory of Network Interference (OONI), Sinar Project, and the Myanmar ICT for Development Organization (MIDO)."
+    authors: "Kay Yen Wong, Maria Xynou, Arturo Filastò, Khairil Yusof, Tan Sze Ming, MIDO"
+    date: "Mar 29, 2017"
+
+  - title: "The State of Internet Censorship in Thailand"
+    web_url: https://ooni.org/post/thailand-internet-censorship/
+    abstract: "A research study by the Open Observatory of Network Interference (OONI), Sinar Project, and the Thai Netizen Network"
+    authors: "Kay Yen Wong, Maria Xynou, Arturo Filastò, Khairil Yusof, Tan Sze Ming, Thai Netizen Network"
+    date: "Mar 20, 2017"
 
 
 
