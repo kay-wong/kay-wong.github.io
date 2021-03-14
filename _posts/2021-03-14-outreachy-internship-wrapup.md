@@ -14,13 +14,13 @@ As I reflect on my internship journey, it's amazing to see how far I've come, an
 
 # WikiReliability: A large scale dataset for Content Reliability on Wikipedia
 ---
-My internship project on Creating Machine Learning datasets to Measure Content Reliability has seen a lot of progress from when I'd first written about it in a previous [blog post]({{ site.url }}{{ site.baseurl | append:'/2021/01/15/creating-machine-learning-datasets-to-measure-content-reliability/' }}) of mine. 
+My internship project on "Creating Machine Learning datasets to Measure Content Reliability" has seen a lot of progress from when I'd first written about it in a previous [blog post]({{ site.url }}{{ site.baseurl | append:'/2021/01/15/creating-machine-learning-datasets-to-measure-content-reliability/' }}) of mine. 
 
 I'm excited to share that we've since released our content reliability datasets, titled WikiReliability, which we've published [here](https://figshare.com/articles/dataset/Wiki-Reliability_A_Large_Scale_Dataset_for_Content_Reliability_on_Wikipedia/14113799). Our final datasets are constructed from the top 10 most popular reliability-related templates on Wikipedia. We've released both text-level and metadata feature-level datasets, in the hopes of encouraging future work from open source and research communities on automatic content reliability detection on Wikipedia.
 
-Beyond releasing our datasets, we also shared [Jupyter notebook code examples](https://public.paws.wmcloud.org/User:0xkaywong/WikiReliability-Benchmarking.ipynb), which demonstrate how to make use of the data, and which benchmark the quality of our datasets on multiple Machine Learning models.
+We also shared [Jupyter notebook code examples](https://public.paws.wmcloud.org/User:0xkaywong/WikiReliability-Benchmarking.ipynb), which demonstrate how to make use of the data, and which benchmark the quality of our datasets on multiple Machine Learning models.
 
-Past the dataset and benchmarking deliverables, our main contribution is a template-based methodology for extracting such datasets on Wikipedia. This means that the approach is applicable towards similar datasets for other templates on Wikipedia. It was also important to us that our final approach was language agnostic, which means that the method is transferable to other language versions of Wikipedia as well. 
+Beyond the dataset and benchmarking deliverables, our main contribution is a template-based methodology for extracting such datasets on Wikipedia. This means that the approach is applicable towards similar datasets for other templates on Wikipedia. It was also important to us that our final approach was language agnostic, which means that the method is transferable to other language versions of Wikipedia as well. 
 
 We released our code for dataset construction on [our GitHub page](https://github.com/kay-wong/Wiki-Reliability). A full report of my research project is also available on [Meta-Wiki](https://meta.wikimedia.org/wiki/Research:Wiki-Reliability:_A_Large_Scale_Dataset_for_Content_Reliability_on_Wikipedia), where I described in full detail our dataset, methodology, and benchmarking results.
 
@@ -68,7 +68,7 @@ I'm open to (but not limited to) remote Data Scientist, Machine Learning Enginee
 
 <br>
 
-I would love to work with a community with the same ideals for open source for social good, where I can continue to learn and grow. Although my amazing Outreachy internship with the Wikimedia Foundation has come to an end, my journey in open source has just begun. 
+I would love to work with a community with the same ideals of open source for social good, where I can continue to learn and grow. Although my amazing Outreachy internship with the Wikimedia Foundation has come to an end, my journey in open source has just begun. 
 <br>
 <br>
 <br>
