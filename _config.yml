@@ -20,7 +20,7 @@ defaults:
 bio: "An experienced programmer with a demonstrated history of research and industry experience in Machine Learning. I’m passionate about Machine Learning, Natural Language Processing, and Civic Technology. I completed my Bachelors in Computer Science (Honours) at Monash University Australia, with a thesis focused in Neural Machine Translation."
 
 projects:
-  sort_by: pushed
+  sort_by: stars
   # sort_by options:
   #   - pushed
   #   - stars
