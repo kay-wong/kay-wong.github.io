@@ -4,9 +4,9 @@ published: true
 abstract: "As I reflect on my internship journey, it's amazing to see how far I've come, and how much there is to be thankful for. So without much further ado, here is my final wrap-up blog post on my Outreachy internship with the Wikimedia Foundation ... "
 ---
 
-I'm finally publishing my final blog post, which has been long overdue. Though my internship officially ended at the beginning of March, I was working with my mentors on submitting the results of my internship as a conference paper. It was hectic, but also a really exciting experience!
+I'm finally publishing my last Outreachy blog, which has been long overdue. Though my internship officially ended at the beginning of March, I was working with my mentors on submitting the results of my internship as a conference paper. It was hectic, but also a really exciting experience!
 
-As I reflect on my internship journey, it's amazing to see how far I've come, and how much there is to be thankful for. So without much further ado, here is my final wrap-up blog post on my Outreachy internship with the Wikimedia Foundation. 
+As I reflect on my internship journey, it's amazing to see how far I've come, and how much there is to be thankful for. So without much further ado, here is my final wrap-up post on my Outreachy internship with the Wikimedia Foundation. 
 
 <br>
 <br>
@@ -22,7 +22,7 @@ We also shared [Jupyter notebook code examples](https://public.paws.wmcloud.org/
 
 Beyond the dataset and benchmarking deliverables, our main contribution is a template-based methodology for extracting such datasets on Wikipedia. This means that the approach is applicable towards similar datasets for other templates on Wikipedia. It was also important to us that our final approach was language agnostic, which means that the method is transferable to other language versions of Wikipedia as well. 
 
-We released our code for dataset construction on [our GitHub page](https://github.com/kay-wong/Wiki-Reliability). A full report of my research project is also available on [Meta-Wiki](https://meta.wikimedia.org/wiki/Research:Wiki-Reliability:_A_Large_Scale_Dataset_for_Content_Reliability_on_Wikipedia), where I described in full detail our dataset, methodology, and benchmarking results.
+We released our code for dataset construction on [our GitHub page](https://github.com/kay-wong/Wiki-Reliability). A full report of my research project is also available on [Meta-Wiki](https://meta.wikimedia.org/wiki/Research:Wiki-Reliability:_A_Large_Scale_Dataset_for_Content_Reliability_on_Wikipedia), describing in full detail our dataset, methodology, and benchmarking results.
 
 <br>
 <br>
@@ -31,7 +31,7 @@ We released our code for dataset construction on [our GitHub page](https://githu
 ---
 Having worked on my project for the last few months, I realised that there's still a lot to be done within the WikiProjectReliability project's efforts to ensure content reliability on Wikipedia. 
 
-There are still some questions and areas for improvement which I wish we had more time to tackle in these short 3 months of my internship! For example, a crucial next step is to expand our datasets to other languages beyond English Wikipedia. 
+There are still some questions and areas for improvement which I wish we had more time to tackle in these short 3 months of my internship. For example, a crucial next step is to expand our datasets to other languages beyond English Wikipedia. 
 
 The beauty of open source is that I (and others drawn to this project) can continue to contribute to this. Though my internship has ended, I'm looking forward to continuing with contributing to this important effort.
 <br>
