@@ -62,7 +62,7 @@ I'd like to continue working in the open source space, and am excited to explore
 
 I have a background in Natural Language Processing, Machine Learning, and Civic Tech, and have had prior research and work experience in all three. I've had 2 years of work experience in ML-Ops and Data Science, and a demonstrated history of working and contributing in the civic technology space.
 
-I'm open to (but not limited to) remote Data Scientist, Machine Learning Engineering or Data Engineering roles. Please do check out my [resume](https://drive.google.com/file/d/1c-aOY9ALImiov-bNWDwIb9teo6Vooa78/view?usp=sharing) and my [About Me]({{ site.url }}{{ site.baseurl | append:'/2020/12/02/outreachy-blog-1-about-me/' }}) post!
+I'm open to (but not limited to) remote Data Scientist, Machine Learning Engineering or Data Engineering roles. Please do check out my [resume](https://drive.google.com/file/d/1V1Lrf2yft8SGxEf5TmmcvmXdjdPAZXvg/view?usp=sharing) and my [About Me]({{ site.url }}{{ site.baseurl | append:'/2020/12/02/outreachy-blog-1-about-me/' }}) post!
 
 > ***\</self-promotional content\>***
 
