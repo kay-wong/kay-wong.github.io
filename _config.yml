@@ -73,6 +73,12 @@ topics:
 
 publications:
 
+  - title: "Wiki-Reliability: A Large Scale Dataset for Content Reliability on Wikipedia"
+    web_url: https://dl.acm.org/doi/abs/10.1145/3404835.3463253
+    abstract: "In SIGIR '21: Proceedings of the 44th International ACM SIGIR Conference on Research and Development in Information Retrieval"
+    authors: "KayYen Wong, Miriam Redi, Diego Saez-Trumper"
+    date: "Jul, 2021"
+
   - title: "Contextual Neural Machine Translation Improves Translation of Cataphoric Pronouns"
     web_url: https://www.aclweb.org/anthology/2020.acl-main.530/ 
     abstract: "In Proceedings of the 58th Conference of the Association for Computational Linguistics (ACL2020)."
