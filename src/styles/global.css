@@ -13,15 +13,29 @@ body:has(.about-intro) .shell{max-width:832px}body:has(.about-intro) .about-intr
 
 /* Biography paragraphs and lists share a comfortable reading rhythm. */
 .about-bio { line-height: 1.8; }
-.about-bio ul { margin: 24px 0; padding-left: 1.25em; color: var(--muted); }
-.about-bio li { padding-left: .35em; margin-bottom: 14px; }
+.about-section { padding-block: 28px 30px; }
+.about-bio ul { margin: 18px 0; padding-left: 1.25em; color: var(--muted); }
+.about-bio li { padding-left: .35em; margin-bottom: 9px; }
 .about-bio li:last-child { margin-bottom: 0; }
 .about-bio li::marker { color: var(--muted); }
-.career-entries { min-width: 0; }
+.career-entries { min-width: 0; gap: 36px; }
 .about-career { grid-template-columns: minmax(165px, max-content) minmax(0, 1fr); }
 .about-career > span { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fun-facts ul { margin: 0; padding-left: 1.25em; color: var(--muted); line-height: 1.7; }
+.fun-facts li { padding-left: .35em; margin-bottom: 9px; }
+.fun-facts li:last-child { margin-bottom: 0; }
+.fun-facts li::marker { color: var(--focus); }
+.about-bio a, .fun-facts a {
+  color: var(--focus);
+  text-decoration-color: color-mix(in srgb, var(--focus) 45%, transparent);
+}
+.about-bio a:hover, .fun-facts a:hover {
+  color: var(--text);
+  text-decoration-color: var(--text);
+}
 @media (max-width: 600px) {
   .about-career { grid-template-columns: minmax(0, 1fr); }
+  .about-section { padding-block: 24px; }
 }
 
 /* A compact editorial headline for the longer About introduction. */

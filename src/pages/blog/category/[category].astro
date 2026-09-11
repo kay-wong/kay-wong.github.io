@@ -2,10 +2,10 @@
 import Base from '../../../layouts/Base.astro';
 import PostList from '../../../components/PostList.astro';
 import CategoryNav from '../../../components/CategoryNav.astro';
-import { publishedPosts } from '../../../lib/posts';
+import { categorySlug, publishedPosts } from '../../../lib/posts';
 export async function getStaticPaths() {
   const posts = await publishedPosts();
-  return [...new Set(posts.map(post => post.data.category))].map(category => ({ params: { category }, props: { category } }));
+  return [...new Set(posts.map(post => post.data.category))].map(category => ({ params: { category: categorySlug(category) }, props: { category } }));
 }
 const { category } = Astro.props;
 const posts = (await publishedPosts()).filter(post => post.data.category === category);
