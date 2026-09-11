@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  caption: string;
+  size?: 'compact' | 'prose' | 'wide';
+}
+
+const { src, alt, caption, size = 'prose' } = Astro.props;
+const widths = size === 'compact' ? [360, 520] : size === 'wide' ? [480, 680, 720] : [480, 680];
+const sizes = size === 'compact'
+  ? '(min-width: 600px) 520px, calc(100vw - 40px)'
+  : size === 'wide'
+    ? '(min-width: 1250px) 720px, (min-width: 760px) 680px, calc(100vw - 40px)'
+    : '(min-width: 760px) 680px, calc(100vw - 40px)';
+---
+
+<figure class:list={{ 'article-figure': true, [`article-figure-${size}`]: true }}>
+  <Image src={src} alt={alt} widths={widths} sizes={sizes} />
+  <figcaption>{caption}</figcaption>
+</figure>

@@ -1,0 +1,30 @@
+---
+title: "An experiment is more than a metric"
+description: "Keeping enough context to understand a result a month later."
+date: 2026-02-20
+category: Engineering
+tags: [Engineering, Research notes]
+toc: true
+---
+
+import Callout from '../../components/Callout.astro';
+
+*Example MDX post — replace with your own writing before publishing.*
+
+A run finishes, a number improves, and the next experiment begins. A month later, the result is still there but the reasoning is gone.
+
+## Write down the hypothesis
+
+One sentence is often enough: “This change should improve recall on short inputs because the current representation loses local context.” It connects a proposed mechanism to an observable effect.
+
+<Callout title="Leave a trail">
+  <p>Save the configuration, data version, and a short interpretation together. A number is easier to reuse when its context travels with it.</p>
+</Callout>
+
+## Separate observation from explanation
+
+“Recall increased” is an observation. “The model learned better local features” is an explanation that needs more evidence. Keeping the two apart makes the next experiment easier to design.
+
+## Close the loop
+
+End the note with what you would do next. Sometimes that is a follow-up experiment. Sometimes it is deciding that the added complexity is not worth a small gain.

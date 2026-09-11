@@ -1,0 +1,20 @@
+---
+import Base from '../layouts/Base.astro';
+import PostList from '../components/PostList.astro';
+import { publishedPosts } from '../lib/posts';
+import { site } from '../site';
+import { path } from '../lib/urls';
+const posts = await publishedPosts();
+---
+<Base>
+  <section class="intro">
+    <p class="eyebrow">ML Engineer · Power User · Occasional Sickly Scientist</p>
+    <h1>Kay Yen Wong<span class="title-period">.</span></h1>
+    <p class="lede">{site.intro}</p>
+  </section>
+  <section aria-labelledby="recent-writing">
+    <div class="section-heading"><h2 id="recent-writing">Recent writing</h2><a href={path('blog/')}>All writing <span aria-hidden="true">→</span></a></div>
+    <PostList posts={posts.slice(0, 5)} />
+    {posts.length === 0 && <p class="empty-state">The notebook is open. New writing will appear here.</p>}
+  </section>
+</Base>

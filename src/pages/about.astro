@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+---
+<Base title="About">
+  <section class="about-intro">
+    <div><h2>Power user / ML engineer. <br> Occasional sickly scientist.</h2><p class="lede">I write about ML, open source, the web, and occasionally using too much compute to investigate my own problems.</p></div>
+    <aside class="about-profile" aria-label="Author profile">
+      <h2>{site.name}</h2>
+      <dl>
+        <dt>Location</dt><dd>{site.location || 'Add your location'}</dd>
+        <dt>Focus</dt><dd>{site.focus}</dd>
+        <dt>Links</dt><dd class="profile-links">{site.github ? <a href={site.github}>GitHub</a> : <span>GitHub (add URL)</span>}{site.linkedin ? <a href={site.linkedin}>LinkedIn</a> : <span>LinkedIn (add URL)</span>}{site.email && <a href={`mailto:${site.email}`}>Email</a>}</dd>
+      </dl>
+    </aside>
+  </section>
+  <section class="about-section" aria-labelledby="about-work">
+    <h2 class="about-label" id="about-work">Work</h2>
+    <div class="about-bio">
+      <h3 class="work-title">About Me</h3>
+      <p>I like to describe myself as a power user turned ML engineer.</p>
+      <p>
+        Throughout my career, I’ve tended to work on technologies and communities I already
+        cared about as a user. I’ve found that actually using a product— sometimes obsessively— gives
+        you a different kind of intuition for the problems worth solving.
+      </p>
+      <ul>
+        <li>I was a Tumblr DAU long before I joined the company, where I spent nearly four years working on recommendations, ranking, content understanding, search, and growth.</li>
+        <li>I grew up disappearing down Wikipedia rabbit holes and later joined the Wikimedia Foundation as a Research Engineer working on content reliability.</li>
+        <li>I collaborated with the Tor Project on research into internet censorship across Southeast Asia.</li>
+        <li>I’ve been a Redditor since my teens; now I work at Reddit.</li>
+      </ul>
+      <p>Apparently my career strategy is just to get hired by websites I spend too much time on. \/s</p>
+    </div>
+  </section>
+  <section class="about-section" aria-labelledby="about-career"><h2 class="about-label" id="about-career">Career</h2><div class="career-entries">{site.career.map(entry => <div class="about-career"><span>{entry.period}</span><div><h3>{entry.title}</h3><p>{entry.description}</p></div></div>)}</div></section>
+</Base>
