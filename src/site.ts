@@ -15,7 +15,7 @@ export const site = {
     { period: 'Feb 2018 - Jan 2020', title: 'Machine Learning Engineer', description: 'Accenture' },
   ],
   focus: 'Machine learning, recommender systems, open source, the web, and assorted technical rabbit holes.',
-  defaultImage: '/social-default.png',
-  defaultImageAlt: 'Kay Yen Wong — notes on machine learning and the web',
+  defaultImage: '/social-default-2026.png',
+  defaultImageAlt: 'Kay Yen Wong — Machine Learning and Technical Rabbit Holes',
   disqusShortname: import.meta.env.PUBLIC_DISQUS_SHORTNAME || '',
 };
