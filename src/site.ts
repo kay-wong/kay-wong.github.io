@@ -2,7 +2,7 @@ export const site = {
   name: 'Kay Yen Wong',
   alternateNames: ['Kay Wong', 'KayYen Wong', 'Kayyen Wong'],
   title: 'Notes on machine learning',
-  description: 'Notes on machine learning, open source, the web, and whatever rabbit hole I\'m currently falling into.',
+  description: 'Notes on machine learning, open source, the web, and whatever rabbit hole I\'m currently falling into. Occasionally my own research subject.',
   intro: 'Power user turned ML Engineer. I write about Machine Learning, the internet, and occasionally using too much compute to investigate my own problems.',
   github: 'https://github.com/kay-wong', // Full profile URL; empty hides the link.
   email: 'kayyenwong@gmail.com',

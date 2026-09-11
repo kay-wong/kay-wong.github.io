@@ -1,5 +1,5 @@
 ---
-title: I’m an AI Engineer. My Genome Came Back Inconclusive. So I Investigated it with AlphaGenome.
+title: I’m an AI Engineer. My Genetic Test Came Back Inconclusive. So I Investigated it with AlphaGenome.
 description: "Using AlphaFold, AlphaMissense and AlphaGenome to make a VUS slightly less uncertain."
 date: 2026-09-11
 category: Machine learning
@@ -23,7 +23,7 @@ Because there’s a secret third option: the test finds a change in your DNA, bu
 
 A VUS is a strange thing to receive. The lab can tell you exactly what changed in your DNA, exactly which amino acid that alters in the resulting protein, and exactly where it happened, while still being unable to tell you the thing you actually want to know: **whether it matters**.
 
-Mine was in a gene where other mutations were known to cause disease, and it was plausibly relevant to some of my clinical symptoms. The problem was that my particular mutation wasn’t one of the known ones. At a particular position in the gene, one DNA letter had been swapped out for another in a way that had not previously been reported in an affected patient.
+Mine was in a gene associated with disorders affecting muscle and connective tissue, which overlapped enough with some of my symptoms to make the result hard to ignore. The problem was that my particular mutation wasn’t one of the known disease-causing ones. At a particular position in the gene, one DNA letter had been swapped out for another in a way that had not previously been reported in an affected patient.
 
 I had become **patient-zero of a mutation with no priors**. One precise enough to name, but not well understood enough to interpret.
 
@@ -58,21 +58,17 @@ So that one-character source diff produced a different amino acid in the resulti
 ```
 I’m not a biologist. At this point, I was still Googling what an amino acid was. But with some help from the internet and AI, I learned that isoleucine and asparagine were quite different chemically. 
 
-Isoleucine is *hydrophobic*, meaning it tends to avoid water; while asparagine is *polar*, i.e: interacts more readily with water. Their Grantham distance is 149, which is molecular biology speak for “*pretty chemically different*”. 
+Isoleucine is *hydrophobic*, meaning it tends to avoid water; while asparagine is *polar*, i.e: interacts more readily with water. Their Grantham distance is 149, which is molecular biology speak for “*pretty chemically different*". 
 
 Proteins are not just strings of amino acids. They fold into three-dimensional structures, and the chemistry of each amino acid helps determine how those structures hold together and behave.
 
-My first mental model was naively simple:
-
-1. Take the normal protein.
-2. Take the mutated protein.
-3. Compare the two and look for whatever broke.
+My first mental model was naively simple: *Take the normal protein. Take the mutated protein. Compare the two and look for whatever broke.*
 
 As it turns out, protein structures are not quite that easy to diff.
 
-But the basic idea turned out not to be completely useless. Even if I couldn’t just generate a clean “before” and “after” and diff the shapes, I could still ask where the changed amino acid sat, what kind of structural environment it lived in, and whether swapping it for a chemically different amino acid looked plausible.
+But the basic idea turned out not to be completely useless. Even if I couldn’t just generate a clean *before* and *after* and diff the shapes, I could still ask where the changed amino acid sat, what kind of structural environment it lived in, and whether swapping it for a chemically different amino acid looked plausible.
 
-If it was sitting on the protein’s surface for example, and exposed to water, then swapping in a polar amino acid might be less disruptive. But if it was buried inside the protein and/or packed among other hydrophobic amino acids shielded from water, replacing it with a polar one could potentially make it less stable.
+If it was on the protein’s surface, where it could already interact with water, a polar substitution might be relatively easy to accommodate. But if it was buried inside the protein, in a region normally shielded from water, the same substitution could be more disruptive to local packing and stability.
 
 That gave me my first task: **find the changed amino acid in a 3D protein model and figure out what kind of neighborhood it lived in.**
 
@@ -98,7 +94,7 @@ SASA is basically a measure of how much of an amino acid a water-sized probe cou
 
 Running the SASA calculation in ChimeraX gave the amino acid affected by my mutation an accessible surface area of: 21 Å².
 
-<Figure src={figure2} alt="ChimeraX output showing the solvent-accessible surface area calculation" caption="Figure 2. ChimeraX reports a solvent-accessible surface area of 21 Å² for the affected amino acid." size="wide" />
+<Figure src={figure2} alt="ChimeraX output showing the solvent-accessible surface area calculation" caption="Figure 2. ChimeraX reports a solvent-accessible surface area of 21 Å² for the affected amino acid." size="prose" />
 
 By comparison, a fully exposed isoleucine typically sits at around 200 Å². On that scale, mine was only about **11% exposed** — in other words, strongly buried inside the protein.
 
@@ -113,7 +109,7 @@ The structure gave me one clue, but I wanted to know whether this particular sit
 
 If the same amino acid keeps showing up at the same spot in the protein across many related species, that could be a sign that changing it is less well tolerated.
 
-<Figure src={figure3} alt="UniProt sequence alignment across several mammal species" caption="Figure 3. The affected isoleucine and much of its surrounding sequence are conserved across the mammals compared in UniProt." size="prose" />
+<Figure src={figure3} alt="UniProt sequence alignment across several mammal species" caption="Figure 3. The affected isoleucine and much of its surrounding sequence are conserved across the mammals compared in UniProt." size="compact" />
 
 Using [UniProt](https://www.uniprot.org/align) to compare the corresponding stretch of the protein across several mammals showed that **the isoleucine affected by my mutation was conserved across the mammals I checked**, with the surrounding sequence also being largely similar.
 
@@ -125,11 +121,11 @@ Next, I looked up the mutation in [AlphaMissense](https://alphamissense.hegelab.
 
 <Figure src={figure4} alt="AlphaMissense pathogenicity predictions for substitutions at the affected position" caption="Figure 4. AlphaMissense predictions vary with the chemistry of the substituted amino acid." size="compact" />
 
-My mutation, **Ile \-\> Asn**, scored **0.809**, which AlphaMissense labels “likely pathogenic”.
+My mutation, **Ile \-\> Asn**, scored **0.809**, which AlphaMissense labels “likely pathogenic".
 
-What was interesting is that when you look at what AlphaMissense predicts for other substitutions, a clear pattern emerges:
+What's interesting is that when you look at what AlphaMissense predicts for other substitutions, a clear pattern emerges:
 
-Substitutions for other hydrophobic amino acids like Leu, Met, and Phe, were predicted to be likely benign. But replacing it with chemically different amino acids– Lys (charged), His (polar/partly charged), or Asn (polar), were predicted to be much more damaging.
+Substitutions for other hydrophobic amino acids like Leu, Met, and Phe, were predicted to be likely benign. But replacing it with chemically different amino acids-- Lys (charged), His (polar/partly charged), or Asn (polar), were predicted to be much more damaging.
 
 In other words, AlphaMissense seemed to be indicating that this position may tolerate replacement with other bulky hydrophobic residues, **but not substitutions that change the local chemistry more dramatically**.
 
@@ -137,17 +133,18 @@ In other words, AlphaMissense seemed to be indicating that this position may tol
 
 While I was in the middle of all this, DeepMind released [AlphaGenome Atlas](https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/).
 
-While AlphaMissense asks, “*how bad does this amino-acid substitution look?*”, AlphaGenome asks the broader question: “*what molecular effects might this DNA change have?*”
+While AlphaMissense asks, “*how bad does this amino-acid substitution look?*", AlphaGenome asks the broader question: “*what molecular effects might this DNA change have?*"
 
 AlphaGenome takes a DNA sequence and predicts how changing it might affect what the cell actually does with that DNA. A mutation might change the protein itself, as mine does, but it could also change when or how much of the gene gets used, or how the cell processes its instructions before making the protein.
 
 For each mutation, AlphaGenome reports an **AlphaGenome Variant Impact (AVI)** score: essentially a way of ranking how unusual or consequential the model thinks that DNA change looks compared with other possible single-letter changes in the genome.
 
+
+<Figure src={figure5} alt="AlphaGenome Atlas result showing the variant impact score and feature contributions" caption="Figure 5. AlphaGenome’s variant-impact result and contributing signals for the mutation." size="compact" maxWidth={400} />
+
 Mine had an **AVI Phred** score of 25.7, putting it in the top 0.27% for predicted molecular impact. In practical terms, if you ranked 10,000 possible single-letter DNA changes by how much AlphaGenome expects them to affect molecular biology, mine would land somewhere around the top 27\. 🫠
 
-<Figure src={figure5} alt="AlphaGenome Atlas result showing the variant impact score and feature contributions" caption="Figure 5. AlphaGenome’s variant-impact result and contributing signals for the mutation." size="prose" />
-
-Then I got to the feature importance breakdown– basically, which signals were contributing most to the score.
+Then I got to the feature importance breakdown-- basically, which signals were contributing most to the score.
 
 > **AlphaMissense: 51.2% · Cactus: 28.5% · PhastCons: 17.7%**
 
@@ -159,16 +156,16 @@ So the strongest signals in AlphaGenome were pointing back to the same two thing
 
 ## So, Did AI Solve Me?
 
-Not exactly. But **I understood the mutation a lot better than I did when I started.**
+Not exactly. **But I understood the mutation (and the biology around it) a lot better than I did when I started.**
 
-What had originally been a cryptic line in a genetic report now had a physical picture attached to it. I knew what kind of amino acid had changed, where it appeared to sit in the protein, that it was mostly buried, and that evolution had kept the same amino acid around across a surprisingly wide range of species. AlphaMissense found the particular substitution suspicious, and AlphaGenome’s strongest signals ended up pointing back to the same things I had been investigating.
+What had originally been a cryptic line in a genetic report now had a plausible physical story attached to it. I understood what kind of amino acid had changed, where it sat in the protein, why it being buried might matter, and why conservation across species was relevant. I also had a better sense of what the gene was involved in and why that could plausibly overlap with some of my own symptoms.
 
-There was still one wrinkle: Earlier computational predictions from my genetic tests had been less convinced. Invitae’s model indicated that the mutation was not expected to disrupt protein function, with a negative predictive value of 80%, while Fulgent reported a REVEL score of 0.64. AlphaMissense, meanwhile, scored it 0.809 and classified it as likely pathogenic.
+There was still one wrinkle: Earlier computational predictions from my genetic tests had been less convinced. One lab's model indicated that the mutation was not expected to disrupt protein function, with a negative predictive value of 80%, while another reported a REVEL score of 0.64. AlphaMissense, meanwhile, scored it 0.809 and classified it as likely pathogenic.
 
-So this was definitely not a case of feeding my mutation into AI and receiving The Answer™. Even so, it got me much further than I expected.
+So this was not a case of feeding my mutation into AI and receiving The Answer™. Even so, it got me much further than I expected.
 
-I went into this knowing almost nothing about genetics or molecular biology. Beyond prediction scores, AI helped me understand enough of the biology to know what questions to ask: **why it might matter that an amino acid is buried, why conservation across species is interesting, and what the different models were actually trying to predict.**
+I went into this knowing almost nothing about genetics or molecular biology. Beyond prediction scores, AI helped me understand enough of the biology to know what questions to ask, what the models were actually predicting, and where the remaining uncertainty lived.
 
-I still don’t know whether this mutation is my answer. Getting there would require more clinical evidence– things like targeted tissue testing, functional studies, or eventually more patients with the same mutation.
+I still don’t know whether this mutation is my answer. Getting there would require more clinical evidence-- things like targeted tissue testing, functional studies, or eventually more patients with the same mutation.
 
 But I did manage to turn a **Variant of Uncertain Significance** into, at the very least, a **Variant of Slightly Less Uncertain Significance**.
