@@ -1,11 +1,13 @@
 ---
-title: I’m an AI Engineer. My Genetic Test Came Back Inconclusive. So I Investigated it with AlphaGenome.
-description: "Using AlphaFold, AlphaMissense and AlphaGenome to make a VUS slightly less uncertain."
+title: Using AlphaGenome to Investigate My Own Genetic Mutation
+description: "Using AlphaFold, AlphaMissense and AlphaGenome to make a Variant of Uncertain Significance slightly less uncertain."
 date: 2026-09-11
 category: Machine Learning
 tags: [Machine learning]
 comments: true
 commentId: investigating-my-genetic-mutation-with-ai
+socialImage: /images/alphagenome-social.png
+socialImageAlt: AlphaGenome analysis of a genetic variant
 ---
 import Finding from '../../components/Finding.astro';
 import Figure from '../../components/Figure.astro';
@@ -111,7 +113,7 @@ If the same amino acid keeps showing up at the same spot in the protein across m
 
 <Figure src={figure3} alt="UniProt sequence alignment across several mammal species" caption="Figure 3. The affected isoleucine and much of its surrounding sequence are conserved across the mammals compared in UniProt." size="compact" />
 
-Using [UniProt](https://www.uniprot.org/align) to compare the corresponding stretch of the protein across several mammals showed that **the isoleucine affected by my mutation was conserved across the mammals I checked**, with the surrounding sequence also being largely similar.
+Using [UniProt](https://www.uniprot.org/align) to compare the corresponding stretch of the protein across several species showed that **the isoleucine affected by my mutation was conserved across the mammals I checked**. Chicken had valine at the same position (still a chemically similar hydrophobic amino acid) while the surrounding sequence was also largely conserved.
 
 That didn’t prove the mutation was harmful, but it added another useful clue: that this was not only a buried amino acid, but one that evolution had preserved across species.
 

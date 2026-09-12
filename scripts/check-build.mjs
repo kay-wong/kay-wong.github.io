@@ -22,6 +22,6 @@ for (const file of files.filter(f => f.endsWith('.html'))) {
     await access(join(root, url.endsWith('/') ? `${url}index.html` : url));
   }
 }
-for (const name of ['rss.xml','sitemap-index.xml','robots.txt','social-default.png']) await access(join(root,name));
+for (const name of ['rss.xml','sitemap-index.xml','robots.txt','images/social-default-2026.png','images/alphagenome-social.png']) await access(join(root,name));
 assert.match(await readFile('dist/rss.xml','utf8'), /<item>/);
 console.log(`Verified metadata and local links in ${files.filter(f=>f.endsWith('.html')).length} pages, RSS, sitemap, and social image.`);

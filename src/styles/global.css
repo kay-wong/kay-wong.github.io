@@ -120,3 +120,9 @@ body:has(.about-intro) .shell{max-width:832px}body:has(.about-intro) .about-intr
   .back-link { margin-bottom: 28px; }
   .article-figure, .article-figure-wide { width: 100%; max-width: 100%; margin-inline: 0; }
 }
+
+/* Let post descriptions use the same text column as their titles. */
+.article-header .lede,
+.post-list p {
+  max-width: none;
+}
