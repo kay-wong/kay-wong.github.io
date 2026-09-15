@@ -11,6 +11,8 @@ const posts = defineCollection({
     created: z.coerce.date().optional(),
     updated: z.coerce.date().optional(),
     draft: z.boolean().default(false),
+    listed: z.boolean().default(true),
+    legacyPath: z.string().startsWith('/').endsWith('/').optional(),
     tags: z.array(z.string()).default([]),
     category: z.string().trim().min(1).default('Uncategorized'),
     socialImage: z.string().optional(),

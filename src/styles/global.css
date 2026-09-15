@@ -126,3 +126,14 @@ body:has(.about-intro) .shell{max-width:832px}body:has(.about-intro) .about-intr
 .post-list p {
   max-width: none;
 }
+
+.archive-note {
+  max-width: 680px;
+  margin: -8px 0 36px;
+  padding: 14px 18px;
+  border-left: 2px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: .8125rem;
+}
+.archive-note strong { color: var(--text); }

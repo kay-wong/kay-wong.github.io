@@ -1,7 +1,13 @@
 import { getCollection } from 'astro:content';
-export async function publishedPosts() {
+export async function allPublishedPosts() {
   return (await getCollection('posts', ({ data }) => !data.draft && data.date <= new Date()))
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+}
+export async function publishedPosts() {
+  return (await allPublishedPosts()).filter(post => post.data.listed !== false);
+}
+export async function legacyPosts() {
+  return (await allPublishedPosts()).filter(post => Boolean(post.data.legacyPath));
 }
 export const formatDate = (date: Date) => new Intl.DateTimeFormat('en-GB', {
   day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC',

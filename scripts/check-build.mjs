@@ -23,5 +23,12 @@ for (const file of files.filter(f => f.endsWith('.html'))) {
   }
 }
 for (const name of ['rss.xml','sitemap-index.xml','robots.txt','images/social-default-2026.png','images/alphagenome-social.png']) await access(join(root,name));
+for (const path of [
+  '2020/12/02/outreachy-blog-1-about-me/index.html',
+  '2020/12/22/outreachy-blog-2-on-struggling/index.html',
+  '2021/01/15/creating-machine-learning-datasets-to-measure-content-reliability/index.html',
+  '2021/01/26/outreachy-blog-4-modifying-expectations/index.html',
+  '2021/03/15/outreachy-wikimedia-internship-wrapup/index.html',
+]) await access(join(root, path));
 assert.match(await readFile('dist/rss.xml','utf8'), /<item>/);
 console.log(`Verified metadata and local links in ${files.filter(f=>f.endsWith('.html')).length} pages, RSS, sitemap, and social image.`);

@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PostArticle from '../../../../components/PostArticle.astro';
+import { legacyPosts } from '../../../../lib/posts';
+export async function getStaticPaths() {
+  return (await legacyPosts()).map(post => {
+    const match = post.data.legacyPath!.match(/^\/(\d{4})\/(\d{2})\/(\d{2})\/([^/]+)\/$/);
+    if (!match) throw new Error(`Invalid legacyPath for ${post.id}: ${post.data.legacyPath}`);
+    const [, year, month, day, slug] = match;
+    return { params: { year, month, day, slug }, props: { post } };
+  });
+}
+interface Props { post: CollectionEntry<'posts'> }
+const { post } = Astro.props;
+---
+<PostArticle post={post} legacy />
