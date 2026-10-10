@@ -94,13 +94,13 @@ Fortunately, there is a measure for this: **solvent-accessible surface area**, o
 
 SASA is basically a measure of how much of an amino acid a water-sized probe could touch. A high value means it’s exposed; a low value means it’s buried.
 
-Running the SASA calculation in ChimeraX gave the amino acid affected by my mutation an accessible surface area of: 21 Å².
+Running the SASA calculation in ChimeraX gave the amino acid affected by my mutation an accessible surface area of: **0.083 Å²**, with a **pLDDT confidence score of 91.19**.
 
-<Figure src={figure2} alt="ChimeraX output showing the solvent-accessible surface area calculation" caption="Figure 2. ChimeraX reports a solvent-accessible surface area of 21 Å² for the affected amino acid." size="prose" />
+<Figure src={figure2} alt="ChimeraX output showing the solvent-accessible surface area calculation" caption="Figure 2. ChimeraX reports a solvent-accessible surface area of 0.083 Å² for the affected amino acid." size="prose" />
 
-By comparison, a fully exposed isoleucine typically sits at around 200 Å². On that scale, mine was only about **11% exposed** — in other words, strongly buried inside the protein.
+By comparison, a fully exposed isoleucine typically sits at around 200 Å². On that scale, mine was **less than 0.1% exposed** — effectively completely buried inside the protein.
 
-This gave me a more concrete hypothesis than a generic prediction score. **The original amino acid was hydrophobic and mostly buried, while the replacement was polar.** Because the interiors of folded proteins are tightly packed, swapping a buried amino acid for one with the opposite chemical property could potentially disturb the shape or stability of that part of the protein.
+This gave me a more concrete hypothesis than a generic prediction score. **The original amino acid was hydrophobic and deeply buried, while the replacement was polar.** Because the interiors of folded proteins are tightly packed, swapping a buried amino acid for one with the opposite chemical property could potentially disturb the shape or stability of that part of the protein.
 
 
 ## Does Evolution Care About This Amino Acid?
