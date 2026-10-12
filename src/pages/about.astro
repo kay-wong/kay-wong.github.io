@@ -4,9 +4,12 @@ import { site } from '../site';
 ---
 <Base title="About">
   <section class="about-intro">
-    <div><h2>Power user / ML engineer</h2><p class="lede">I write about ML, open source, the web, and occasionally using too much compute to investigate my own problems.</p></div>
+    <div class="about-home-intro">
+      <p class="eyebrow">ML Engineer · Power User</p>
+      <h1>Kay Yen Wong<span class="title-period">.</span></h1>
+      <p class="lede">{site.intro}</p>
+    </div>
     <aside class="about-profile" aria-label="Author profile">
-      <h2>{site.name}</h2>
       <dl>
         <dt>Location</dt><dd>{site.location || 'Add your location'}</dd>
         <dt>Focus</dt><dd>{site.focus}</dd>

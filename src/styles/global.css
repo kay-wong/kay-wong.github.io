@@ -137,3 +137,14 @@ body:has(.about-intro) .shell{max-width:832px}body:has(.about-intro) .about-intr
   font-size: .8125rem;
 }
 .archive-note strong { color: var(--text); }
+
+/* Reuse the homepage introduction within the About layout. */
+.about-home-intro { min-width: 0; }
+.about-intro .about-home-intro h1 {
+  font-size: clamp(2.5rem, 5.5vw, 3.7rem);
+  font-weight: 600;
+  letter-spacing: -.055em;
+  line-height: 1.09;
+  margin: 0 0 24px;
+}
+.about-home-intro .lede { max-width: none; }
