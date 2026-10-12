@@ -1,16 +1,16 @@
 ---
-title: "Outreachy Blog 5: Wrapping up my Outreachy internship with Wikimedia"
-description: "A final reflection on the WikiReliability project, its datasets and methodology, and lessons from an Outreachy internship with Wikimedia."
+title: "WikiReliability: A large scale dataset for Content Reliability on Wikipedia"
+description: ""
 date: 2021-03-15
-category: Outreachy / Wikimedia
-tags: [Outreachy, Wikimedia]
-listed: false
+category: Machine Learning
+tags: [Machine learning, Wikimedia]
+# listed: false
 legacyPath: /2021/03/15/outreachy-wikimedia-internship-wrapup/
 comments: false
 ---
-I'm finally publishing my last Outreachy blog, which has been long overdue. Though my internship officially ended at the beginning of March, I was working with my mentors on submitting the results of my internship as a conference paper. It was hectic, but also a really exciting experience!
+_I'm finally publishing my last Outreachy blog, which has been long overdue. Though my internship officially ended at the beginning of March, I was working with my mentors on submitting the results of my internship as a conference paper. It was hectic, but also a really exciting experience!_
 
-As I reflect on my internship journey, it's amazing to see how far I've come, and how much there is to be thankful for. So without much further ado, here is my final wrap-up post on my Outreachy internship with the Wikimedia Foundation.
+_As I reflect on my internship journey, it's amazing to see how far I've come, and how much there is to be thankful for. So without much further ado, here is my final wrap-up post on my Outreachy internship with the Wikimedia Foundation._
 
 # WikiReliability: A large scale dataset for Content Reliability on Wikipedia
 My internship project on "Creating Machine Learning datasets to Measure Content Reliability" has seen a lot of progress from when I'd first written about it in a previous [blog post](/2021/01/15/creating-machine-learning-datasets-to-measure-content-reliability/) of mine.
@@ -44,12 +44,4 @@ My Outreachy internship experience was truly life changing for me, and I'm also 
 # What's Next?
 I'd like to continue working in the open source space, and am excited to explore more of Wikimedia and all the amazing open source communities out there!
 
-> ***\<self-promotional content\>***
-
-I have a background in Natural Language Processing, Machine Learning, and Civic Tech, and have had prior research and work experience in all three. I've had 2 years of work experience in ML-Ops and Data Science, and a demonstrated history of working and contributing in the civic technology space.
-
-I'm open to (but not limited to) remote Data Scientist, Machine Learning Engineering or Data Engineering roles. Please do check out my [resume](https://drive.google.com/file/d/1V1Lrf2yft8SGxEf5TmmcvmXdjdPAZXvg/view?usp=sharing) and my [About Me](/2020/12/02/outreachy-blog-1-about-me/) post!
-
-> ***\</self-promotional content\>***
-
-I would love to work with a community with the same ideals of open source for social good, where I can continue to learn and grow. Although my amazing Outreachy internship with the Wikimedia Foundation has come to an end, my journey in open source has just begun.
+I would love to work with a community with the same ideals of open source for social good, where I can continue to learn and grow. Although my Outreachy internship with the Wikimedia Foundation has come to an end, my journey in open source has just begun.

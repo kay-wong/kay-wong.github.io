@@ -1,10 +1,10 @@
 ---
-title: "Outreachy Blog 3: Creating Machine Learning Datasets to Measure Content Reliablity on Wikipedia"
-description: "Outreachy Blog 3: Creating Machine Learning Datasets to Measure Content Reliablity on Wikipedia"
+title: "Creating Machine Learning Datasets to Measure Content Reliablity on Wikipedia"
+description: ""
 date: 2021-01-15
 category: Machine Learning
 tags: [Machine learning, Wikimedia]
-listed: false
+# listed: false
 legacyPath: /2021/01/15/creating-machine-learning-datasets-to-measure-content-reliability/
 comments: false
 ---

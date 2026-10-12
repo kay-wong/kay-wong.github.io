@@ -1,10 +1,10 @@
 ---
-title: "Outreachy Blog 4: Modifying Expectations"
-description: "Reflections on revising timelines, project goals, and expectations halfway through an Outreachy internship with Wikimedia."
+title: "Outreachy Blog: Modifying Expectations"
+description: ""
 date: 2021-01-26
 category: Outreachy / Wikimedia
 tags: [Outreachy, Wikimedia]
-listed: false
+# listed: false
 legacyPath: /2021/01/26/outreachy-blog-4-modifying-expectations/
 comments: false
 ---

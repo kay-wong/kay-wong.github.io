@@ -1,10 +1,10 @@
 ---
-title: "Outreachy Blog 2: On Struggling"
-description: "Reflections on asking questions, computational constraints, and managing difficult technical work during my Outreachy internship with Wikimedia."
+title: "Outreachy Blog: On Struggling"
+description: ""
 date: 2020-12-22
 category: Outreachy / Wikimedia
 tags: [Outreachy, Wikimedia]
-listed: false
+# listed: false
 legacyPath: /2020/12/22/outreachy-blog-2-on-struggling/
 comments: false
 ---

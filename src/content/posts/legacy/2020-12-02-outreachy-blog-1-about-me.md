@@ -1,10 +1,10 @@
 ---
-title: "Outreachy Blog 1: About Me"
-description: "Outreachy Blog 1: About Me"
+title: "Outreachy Blog: About Me"
+description: ""
 date: 2020-12-02
 category: Outreachy / Wikimedia
 tags: [Outreachy, Wikimedia]
-listed: false
+# listed: false
 legacyPath: /2020/12/02/outreachy-blog-1-about-me/
 comments: false
 ---
